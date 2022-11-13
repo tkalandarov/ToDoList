@@ -1,0 +1,152 @@
+@import url("https://unpkg.com/reset-css/reset.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300|Oswald");
+
+body {
+  background: #455a64;
+  color: #eceff1;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+h1 {
+  font: 72px "Oswald", Arial, sans-serif;
+  margin: 50px 0 10px 0;
+  text-align: center;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  width: 10%;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 200px;
+}
+.row > :first-child {
+  width: 80%;
+}
+
+#taskInput {
+  padding: 0;
+  outline: none;
+  font-size: 25px;
+}
+
+.subheading {
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/***** TASKS *****/
+#taskList li {
+  background: #eceff1;
+  border-bottom: 2px dashed #455a64;
+  color: #455a64;
+  font-size: 20px;
+  width: 600px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li .taskText {
+  margin-left: 10px;
+  flex-basis: 80%;
+}
+
+#taskList li .taskText.completed {
+  text-decoration: line-through solid;
+}
+
+#taskList li > button {
+  width: 40px;
+}
+
+/***** CHECKBOX STYLE *****/
+
+/* The container */
+.checkbox-wrapper {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  height: 25px;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-wrapper:hover input ~ .checkmark {
+  background-color: #666666;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-wrapper input:checked ~ .checkmark {
+  background-color: #006747; /*Dark Green*/
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrapper .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
