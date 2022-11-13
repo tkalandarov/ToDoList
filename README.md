@@ -1,5 +1,5 @@
-[![React Badge](https://img.shields.io/badge/-React-blue?style=flat&logo=React&logoColor=white)]()
-[![JavaScript Badge](https://img.shields.io/badge/-JavaScript-yellow?style=flat&logo=JavaScript&logoColor=white)]()
+[![React Badge](https://img.shields.io/badge/-React-blue?style=flat&logo=React&logoColor=white)](https://reactjs.org/)
+[![JavaScript Badge](https://img.shields.io/badge/-JavaScript-yellow?style=flat&logo=JavaScript&logoColor=white)](https://www.javascript.com/)
 
 # Simple To-Do List 
 Take-home project given by [USF Honors IT](https://github.com/USF-Honors-College) as a part of hiring process.
